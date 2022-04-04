@@ -1,0 +1,16 @@
+.spinner {
+    width: 100px;
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    overflow: hidden
+}
+
+.loading img {
+    min-height: 209px;
+    min-width: 200px;
+}
