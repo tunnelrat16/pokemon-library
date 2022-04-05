@@ -5,10 +5,11 @@ const spinner = document.querySelector(".spinner")
 
 function addPokemonImage(pokemon) {
     const div = document.createElement("div")
+    const pokeTitleCase = `${pokemon.name}`
     div.innerHTML = `
         <figure>
-            <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}" />
-            <figcaption><a href="pokemon.html?pokemon=${pokemon.name}">${pokemon.name} </a></figcaption>
+            <img src="${pokemon.sprites.front_shiny}" alt="${pokeTitleCase}" />
+            <figcaption><a href="pokemon.html?pokemon=${pokeTitleCase}">${pokeTitleCase} </a></figcaption>
         </figure>
     `
     main.append(div)
