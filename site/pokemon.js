@@ -32,6 +32,8 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${queryString.get("pokemon")}`)
                 loading.classList.add("hidden")
             })
         })
+    }).catch(error => {
+        console.error(error.message)
     })
 
 function addPokemonAbility(pokemon) {

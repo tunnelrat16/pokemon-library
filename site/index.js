@@ -2,7 +2,6 @@ const app = document.querySelector("#app")
 const main = document.querySelector("main")
 const loading = document.querySelector(".loading")
 
-
 function addPokemonImage(pokemon) {
     const div = document.createElement("div")
     div.classList.add("pokeMain")
@@ -10,7 +9,8 @@ function addPokemonImage(pokemon) {
     div.innerHTML = `
         <figure>
             <img src="${pokemon.sprites.front_shiny}" alt="${pokeTitleCase}" />
-            <figcaption><a href="pokemon.html?pokemon=${pokemon.name}">${pokeTitleCase} </a></figcaption>
+            <figcaption><a href="pokemon.html?pokemon=${pokemon.name}">
+            ${pokeTitleCase} </a></figcaption>
         </figure>
     `
     main.append(div)
@@ -28,7 +28,7 @@ fetch(url)
         return Promise.all(fetches)
     }).then(responses => {
         loading.classList.add("hidden")
-        responses.forEach(response => {
-            addPokemonImage(response)
-        })
+        responses.forEach(addPokemonImage)
+    }).catch(error => {
+        console.error(error.message)
     })
