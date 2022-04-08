@@ -37,11 +37,12 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${queryString.get("pokemon")}`)
     })
 
 function addPokemonAbility(pokemon) {
+    const pokeTitleCase = `${pokemon.name[0].toUpperCase()}${pokemon.name.slice(1)}`
     const li = document.createElement("li")
     const flavor_text = (pokemon.flavor_text_entries)
         .find(flavor_text_entry => flavor_text_entry.language.name === "en")
     li.innerHTML = ` 
-    <span class="ability-name"> ${pokemon.name} - </span>
+    <span class="ability-name"> ${pokeTitleCase} - </span>
     <span class="ability-short-description"> ${flavor_text.flavor_text}</span>
 `
     ul.append(li)

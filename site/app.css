@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
 body {
     margin-top: 0px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: large;
-    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    font-size: larger;
+    font-weight: 900;
     margin-left: auto;
     margin-right: auto;
     background-image: url('pikachu_minimalist_desktop_wallpaper_by_thegreatdawn_dafdx2j.jpg');
@@ -25,7 +26,7 @@ head {
 
 .mainPage {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr;
     padding: 10px;
 }
@@ -49,11 +50,16 @@ head {
     margin-left: 150px;
 }
 
+.catchDetail {
+    display: flex;
+    margin-left: 80px;
+}
+
 .pokeMain>figure>img {
     width: 130px
 }
 
-.pokeMain>figure>figcaption {
+.pokeMain figcaption {
     margin-left: 25px;
 }
 
@@ -69,4 +75,15 @@ h1 {
 .pokemon {
     grid-row: 2 / span 1;
     grid-column: 1 / span 1;
+    font-weight: 900;
+    font-size: larger;
+}
+
+.pokemon img {
+    width: 250px;
+    margin-left: 25px;
+}
+
+.pokemon figcaption {
+    margin-left: 100px;
 }
