@@ -8,7 +8,7 @@ function addPokemonImage(pokemon) {
         <figure>
             <img src="${pokemon.sprites.front_shiny}" alt="${pokeTitleCase}" />
             <figcaption>${pokeTitleCase}</figcaption>
-            </a>
+            <a>Abilities</a>
         </figure>
     `
     ul.append(div)
